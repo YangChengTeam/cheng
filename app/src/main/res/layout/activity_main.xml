@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <FrameLayout
+         android:layout_width="0dp"
+         android:layout_height="match_parent"
+         android:layout_weight="2"
+         android:background="#000000"
+        >
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <VideoView
+            android:id="@+id/videoplayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_bg_left"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/bg_left"
+        android:orientation="vertical">
+
+        <com.yc.cheng.views.widgets.StrokeTextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:text="15:04:52"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="38dp" />
+        <com.yc.cheng.views.widgets.StrokeTextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_time"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:text="星期五 2019-01-03"/>
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_date"
+            android:layout_centerHorizontal="true"
+            android:text="正在测量体重..."
+            android:layout_marginTop="50dp"
+            android:textColor="#cc1c1c"
+            android:textSize="13dp"
+            android:letterSpacing="0.5"
+            android:visibility="gone"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_bg_process"
+            android:background="@drawable/bg_process"
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tv_desc"
+            android:visibility="gone"
+            >
+            <View
+                android:id="@+id/v_bg_process2"
+                android:background="@drawable/bg_process2"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"></View>
+        </LinearLayout>
+
+        <com.yc.cheng.views.widgets.StrokeTextView
+            android:id="@+id/tv_process"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:textColor="#cc1c1c"
+            android:textSize="30dp"
+            android:text="倒计时: 60s"
+            android:visibility="gone"
+            android:layout_below="@id/ll_bg_process"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"/>
+
+    </RelativeLayout>
+</LinearLayout>
+<RelativeLayout
+    android:id="@+id/rl_bg_result"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_result"
+    android:visibility="gone"
+    >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        >
+    <ImageView
+        android:id="@+id/iv_qrcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#ffffff"
+       >
+    </ImageView>
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/qr_logo"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_success_time"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="14dp"
+        android:background="@drawable/bg_circle"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:text="30"/>
+    </RelativeLayout>
+</FrameLayout>
